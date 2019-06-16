@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class Class1
+    public interface IAccessRepo<T>
     {
+        int Create(T arg);
+        int Update(T arg);
+        void Delete(int arg);
+        List<T> GetAll();
     }
 }
