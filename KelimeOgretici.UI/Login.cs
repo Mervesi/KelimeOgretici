@@ -27,7 +27,10 @@ namespace KelimeOgretici.UI
             UserDataAccess userdb = new UserDataAccess();
             if (userdb.IsUserRegister(user))
             {
-                //yeni form aç
+                this.Hide();
+                HomePage frm = new HomePage();
+                frm.Show();
+                
             }
             else
             {
