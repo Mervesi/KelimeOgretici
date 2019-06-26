@@ -22,7 +22,7 @@ namespace KelimeOgretici.UI
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new Login());
+            Application.Run(new HomePage());
         }
     }
 }

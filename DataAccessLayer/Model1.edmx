@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KelimeOgreticiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KelimeOgreticiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Type">
           <Key>
             <PropertyRef Name="TypeID" />
@@ -29,7 +29,7 @@
           <Property Name="WordEnglish" Type="nvarchar" MaxLength="50" />
           <Property Name="WordTypeID" Type="int" />
         </EntityType>
-        <Association Name="FK_Word_Word">
+        <Association Name="FK_Word_Type">
           <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
           <End Role="Word" Type="Self.Word" Multiplicity="*" />
           <ReferentialConstraint>
@@ -45,13 +45,12 @@
           <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Word" EntityType="Self.Word" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Word_Word" Association="Self.FK_Word_Word">
+          <AssociationSet Name="FK_Word_Type" Association="Self.FK_Word_Type">
             <End Role="Type" EntitySet="Type" />
             <End Role="Word" EntitySet="Word" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KelimeOgreticiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

@@ -7,8 +7,15 @@
       <Diagram DiagramId="a0cb469970fd4f779fd47c0cf957c565" Name="Diagram1">
         <EntityTypeShape EntityType="KelimeOgreticiModel.Type" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="KelimeOgreticiModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KelimeOgreticiModel.Word" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <AssociationConnector Association="KelimeOgreticiModel.FK_Word_Word" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KelimeOgreticiModel.Word" Width="1.5" PointX="4.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="KelimeOgreticiModel.FK_Word_Word" ManuallyRouted="true" >
+          <ConnectorPoint PointX="2.25" PointY="1.922841796875" />
+          <ConnectorPoint PointX="3.075" PointY="1.922841796875" />
+          <ConnectorPoint PointX="3.075" PointY="2.266591796875" />
+          <ConnectorPoint PointX="3.925" PointY="2.266591796875" />
+          <ConnectorPoint PointX="3.925" PointY="1.922841796875" />
+          <ConnectorPoint PointX="4.75" PointY="1.922841796875" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.comboBoxTip = new System.Windows.Forms.ComboBox();
             this.txtBoxIng = new System.Windows.Forms.TextBox();
             this.txtBoxTurk = new System.Windows.Forms.TextBox();
@@ -44,6 +45,7 @@
             this.btnBasla = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.trackBar = new System.Windows.Forms.TrackBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,6 +82,7 @@
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // label1
             // 
@@ -150,6 +153,7 @@
             this.lstTurk.Name = "lstTurk";
             this.lstTurk.Size = new System.Drawing.Size(138, 303);
             this.lstTurk.TabIndex = 0;
+            this.lstTurk.SelectedIndexChanged += new System.EventHandler(this.lstTurk_SelectedIndexChanged);
             // 
             // btnYenile
             // 
@@ -159,6 +163,7 @@
             this.btnYenile.TabIndex = 7;
             this.btnYenile.Text = "Yenile";
             this.btnYenile.UseVisualStyleBackColor = true;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
             // btnSil
             // 
@@ -168,6 +173,7 @@
             this.btnSil.TabIndex = 8;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnBasla
             // 
@@ -177,6 +183,7 @@
             this.btnBasla.TabIndex = 9;
             this.btnBasla.Text = "Başla";
             this.btnBasla.UseVisualStyleBackColor = true;
+            this.btnBasla.Click += new System.EventHandler(this.btnBasla_Click);
             // 
             // groupBox3
             // 
@@ -187,14 +194,18 @@
             this.groupBox3.Size = new System.Drawing.Size(233, 119);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Timer";
             // 
             // trackBar
             // 
-            this.trackBar.Location = new System.Drawing.Point(23, 29);
+            this.trackBar.Location = new System.Drawing.Point(6, 29);
             this.trackBar.Name = "trackBar";
             this.trackBar.Size = new System.Drawing.Size(204, 45);
             this.trackBar.TabIndex = 10;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // HomePage
             // 
@@ -209,6 +220,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "HomePage";
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.Button btnBasla;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TrackBar trackBar;
+        private System.Windows.Forms.Timer timer1;
     }
 }
